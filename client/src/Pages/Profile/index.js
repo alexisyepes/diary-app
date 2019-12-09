@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import API from "../../utils/API";
+import Fade from "react-reveal/Fade";
 import "./style.css";
 
 class index extends Component {
@@ -138,9 +139,8 @@ class index extends Component {
 			? pages.map(page => {
 					return (
 						<div key={page._id}>
-							<ul>
-								<li>{page.text}</li>
-							</ul>
+							<p className="pageContent">{page.text}</p>
+							<hr style={{ background: "black" }} />
 						</div>
 					);
 			  })
@@ -154,31 +154,35 @@ class index extends Component {
 				<button onClick={this.toggleBookPagesHandler}>Empty Page</button>
 				<div>
 					{this.state.toggleBookCover ? (
-						<div className="bookCover">
-							<h1 className="profileTitle">{this.state.name}'s Diary</h1>
-							<div>
-								<div className="bookContent"> {pagesList}</div>
+						<Fade bottom>
+							<div className="bookCover">
+								<h1 className="profileTitle">{this.state.name}'s Diary</h1>
+								<div>
+									<div className="bookContent"> {pagesList}</div>
+								</div>
 							</div>
-						</div>
+						</Fade>
 					) : null}
 				</div>
 
 				{this.state.toggleBookPages ? (
-					<div className="book">
-						<h1 className="profileTitle">{this.state.name}'s Diary</h1>
-						<form onSubmit={this.saveText}>
-							<textarea
-								name="textToSave"
-								defaultValue={this.state.textToSave}
-								onChange={this.onChangeText}
-								className="bookInput"
-								rows="60"
-								cols="50"
-								placeholder="Start Typing"
-							/>
-							<button className="saveButton">Save</button>
-						</form>
-					</div>
+					<Fade bottom>
+						<div className="book">
+							<h1 className="profileTitle">{this.state.name}'s Diary</h1>
+							<form onSubmit={this.saveText}>
+								<textarea
+									name="textToSave"
+									defaultValue={this.state.textToSave}
+									onChange={this.onChangeText}
+									className="bookInput"
+									rows="60"
+									cols="50"
+									placeholder="Start Typing"
+								/>
+								<button className="saveButton">Save</button>
+							</form>
+						</div>
+					</Fade>
 				) : null}
 			</div>
 		);

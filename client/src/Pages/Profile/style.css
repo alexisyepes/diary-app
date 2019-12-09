@@ -4,7 +4,7 @@
 	background: rgba(228, 228, 101, 0.719);
 	border: 10px dotted white;
 	justify-content: center;
-	margin-top: 80px;
+	margin-top: 10px;
 	margin-bottom: 50px;
 	margin-left: auto;
 	margin-right: auto;
@@ -13,13 +13,18 @@
 .bookCover {
 	height: 670px;
 	width: 600px;
-	background: rgba(228, 228, 101, 0.719);
+	background: rgba(168, 168, 56, 0.877);
 	border: 10px dotted white;
 	/* justify-content: center; */
-	margin-top: 80px;
+	margin-top: 10px;
 	margin-bottom: 50px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.pageContent {
+	text-align: left;
+	margin-left: 20px;
 }
 
 .bookContent {
