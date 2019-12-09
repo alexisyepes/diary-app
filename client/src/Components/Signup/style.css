@@ -1,0 +1,8 @@
+.formBoxSignup {
+	background: rgba(32, 23, 7, 0.993);
+	border: 10px double #f3f1f1;
+	margin-top: 40px;
+	padding: 20px;
+	color: white;
+	width: 400px;
+}

@@ -1,0 +1,62 @@
+.book {
+	height: 670px;
+	width: 600px;
+	background: rgba(228, 228, 101, 0.719);
+	border: 10px dotted white;
+	justify-content: center;
+	margin-top: 80px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bookCover {
+	height: 670px;
+	width: 600px;
+	background: rgba(228, 228, 101, 0.719);
+	border: 10px dotted white;
+	/* justify-content: center; */
+	margin-top: 80px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bookContent {
+	font-size: 20px;
+	color: white;
+	text-shadow: 2px 2px #4e370b;
+	margin-top: 20px;
+}
+
+.openBookBtn {
+	margin-top: 80px;
+}
+
+.profileTitle {
+	color: white;
+	text-shadow: 4px 4px #4e370b;
+	font-size: 40px;
+}
+
+.bookInput {
+	background: rgb(158, 139, 98) !important;
+	height: 470px !important;
+	padding: 12px 20px;
+	border-radius: 10px;
+	border: dotted 2px rgb(54, 38, 7);
+	width: 90%;
+	margin: auto;
+	font-size: 20px;
+	color: white;
+	text-align: justify;
+}
+
+.saveButton {
+	padding: 10px 40px 10px 40px;
+	font-size: 20px;
+	border-radius: 15px;
+	background: rgb(241, 121, 35);
+	color: white;
+	text-shadow: 2px 2px #4e370b;
+}

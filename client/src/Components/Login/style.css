@@ -1,0 +1,35 @@
+.signinForm {
+	background: rgba(221, 232, 240, 0.801);
+	border: 3px solid #1d2227;
+	border-radius: 15px;
+	margin: 20px;
+	padding: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	width: 100%;
+}
+
+.signinTitle {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.formBox {
+	background: rgba(32, 23, 7, 0.993);
+	border: 10px double #f3f1f1;
+	margin-top: 40px;
+	padding: 20px;
+	color: white;
+}
+
+.signinPage {
+	margin-top: 60px;
+	margin-bottom: 80px;
+}
+
+@media (max-width: 360px) {
+	.signinPage {
+		margin-top: 10px;
+	}
+}

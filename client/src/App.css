@@ -1,0 +1,62 @@
+.App {
+	text-align: center;
+	font-family: "Monda", sans-serif;
+}
+
+body {
+	background-image: url("/Images/woodenDesk.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.footer {
+	background: black;
+	color: rgb(67, 217, 255);
+	font-size: 18px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 1rem;
+	text-align: center;
+}
+
+@media (max-width: 360px) {
+	.appHeader {
+		display: block !important;
+	}
+
+	.logo {
+		width: 250px !important;
+	}
+}
+
+@media (max-width: 436px) {
+	.logo {
+		margin-left: -60px;
+		width: 250px !important;
+	}
+}
+
+@media (max-width: 562px) {
+	.logo {
+		max-width: 350px;
+	}
+}
+
+@media (max-width: 768px) {
+	.logo {
+		width: 450px;
+	}
+}
+
+@media (max-width: 991px) {
+	/* Styles */
+	.logo {
+		margin-left: 20%;
+	}
+}

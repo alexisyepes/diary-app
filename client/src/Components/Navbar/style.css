@@ -1,0 +1,195 @@
+.navBarMainCompAuth {
+	background: rgb(20, 20, 27);
+	margin-top: -240px;
+	margin-left: -60px;
+}
+
+.appHeader {
+	background-color: rgb(5, 0, 0);
+	/* min-width: 1500px; */
+	margin-top: -80px;
+	min-width: 100%;
+	height: 170px;
+	color: white;
+}
+
+.logoHome {
+	height: 160px;
+	width: 400px;
+}
+
+.navbar-custom {
+	background: rgb(214, 156, 48);
+	color: white;
+}
+
+.navBarMainComp {
+	background: rgb(20, 20, 27);
+	margin-top: -248px;
+	margin-left: -80px;
+}
+
+.nav-item {
+	color: rgb(20, 20, 27) !important;
+	font-size: 20px;
+}
+
+.nav-link {
+	margin-left: 40px;
+	color: white !important;
+	text-shadow: 2px 2px #4e370b;
+}
+
+.navbar-brand {
+	margin-left: 20%;
+	text-shadow: 2px 2px #4e370b;
+}
+
+.menuNoAuth {
+	margin-left: 10%;
+}
+
+.linksNavbarNoAuth {
+	margin-left: 200px;
+}
+
+.navLinks {
+	color: rgb(67, 217, 255);
+	font-size: 20px;
+	margin-left: 200px;
+	padding-top: 20px;
+}
+
+.homeLinkNavbarNoAuth {
+	margin-left: 300px;
+	padding-top: 20px;
+}
+
+.homLinkNavbar {
+	margin-left: 250px;
+	padding-top: 20px;
+}
+
+.aboutLinkNavbar,
+.profileLinkNavbar {
+	font-size: 20px;
+	color: rgb(67, 217, 255);
+	margin-left: 120px;
+	padding-top: 20px;
+}
+
+.usernameLoggedinHome {
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	margin-left: 15%;
+	text-shadow: 2px 2px #4e370b;
+
+	/* padding-top: 13px; */
+	margin-top: 15px;
+}
+
+.logoutBtnNavbar {
+	color: rgb(255, 255, 255) !important;
+	border-radius: 5px;
+	background: rgb(77, 196, 243);
+	padding: 10px 20px 10px 20px;
+	margin-left: 1%;
+	font-size: 16px;
+	color: rgb(4, 9, 37);
+	font-weight: bolder;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Styles */
+	.navBarMainComp {
+		display: none;
+	}
+
+	.navBarMainCompAuth {
+		display: none;
+	}
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
+	/* Styles */
+	.navBarMainComp {
+		display: none;
+	}
+
+	.navBarMainCompAuth {
+		display: none;
+	}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	/* Styles */
+	.homeLinkNavbarNoAuth {
+		margin-left: 130px !important;
+		font-size: 20px;
+	}
+
+	.navLinks {
+		font-size: 20px;
+		margin-left: 80px;
+	}
+
+	.homLinkNavbar {
+		margin-left: 130px;
+		font-size: 20px;
+	}
+
+	.usernameLoggedinHome {
+		font-size: 20px;
+		margin-left: 250px;
+		padding-top: 13px;
+	}
+
+	.navBarMainComp {
+		margin-top: -250px;
+		margin-left: -80px;
+	}
+}
+
+@media (max-width: 991px) {
+	/* Styles */
+	.navbar {
+		display: none;
+	}
+}
+
+@media (max-width: 1025px) {
+	/* Styles */
+	.navbar-brand {
+		margin-left: 50%;
+	}
+	.nav-link {
+		margin-left: 10px;
+	}
+
+	.usernameLoggedinHome {
+		font-size: 18px;
+		margin-left: 50px;
+	}
+}
+
+@media (max-width: 1152px) {
+	/* Styles */
+	.navbar-brand {
+		margin-left: 10%;
+	}
+	.nav-link {
+		margin-left: 20px;
+	}
+}
+
+@media (max-width: 1295px) {
+	/* Styles */
+	.menuNoAuth {
+		margin-left: 30%;
+	}
+	.linksNavbarNoAuth {
+		margin-left: 20px;
+	}
+}
