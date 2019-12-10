@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import API from "../../utils/API";
 import Fade from "react-reveal/Fade";
+import FlipPage from "react-flip-page";
 import "./style.css";
 
 class index extends Component {
@@ -100,7 +101,20 @@ class index extends Component {
 				console.log(res.data);
 			})
 			.catch(err => console.log(err));
+		window.location.href = "/profile";
 	};
+
+	async deletePage({ currentTarget }) {
+		let _id = currentTarget.value;
+		if (
+			window.confirm(`Are you sure you wish to delete this Page permanently?`)
+		) {
+			await API.deletePage(_id)
+				.then(res => console.log(res))
+				.catch(err => console.log(err));
+			window.location.href = "/profile";
+		}
+	}
 
 	render() {
 		const { isLoading, error } = this.state;
@@ -138,9 +152,15 @@ class index extends Component {
 		const pagesList = pages.length
 			? pages.map(page => {
 					return (
-						<div key={page._id}>
-							<p className="pageContent">{page.text}</p>
-							<hr style={{ background: "black" }} />
+						<div className="articleContent" key={page._id}>
+							<button
+								value={page._id}
+								onClick={this.deletePage}
+								className="deleteBtn"
+							>
+								Delete
+							</button>
+							<article className="articleContent">{page.text}</article>
 						</div>
 					);
 			  })
@@ -151,15 +171,28 @@ class index extends Component {
 				<button className="openBookBtn" onClick={this.getAllPagesBook}>
 					Open Your Diary
 				</button>
-				<button onClick={this.toggleBookPagesHandler}>Empty Page</button>
+				<button
+					className="openBookEmptyPageBtn"
+					onClick={this.toggleBookPagesHandler}
+				>
+					Empty Page
+				</button>
 				<div>
 					{this.state.toggleBookCover ? (
 						<Fade bottom>
 							<div className="bookCover">
 								<h1 className="profileTitle">{this.state.name}'s Diary</h1>
-								<div>
-									<div className="bookContent"> {pagesList}</div>
-								</div>
+								<FlipPage
+									uncutPages="true"
+									showSwipeHint="true"
+									pageBackground="rgb(230, 216, 95)"
+									className="flipPageComponent"
+									width="500"
+									height="500"
+									orientation="horizontal"
+								>
+									{pagesList}
+								</FlipPage>
 							</div>
 						</Fade>
 					) : null}

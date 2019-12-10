@@ -15,5 +15,8 @@ export default {
 	},
 	getAllPagesBook: _id => {
 		return axios.get("/auth/users/" + _id);
+	},
+	deletePage: _id => {
+		return axios.delete("/diary/page/" + _id);
 	}
 };

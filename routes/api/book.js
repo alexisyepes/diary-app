@@ -60,4 +60,12 @@ router.get("/diaryAll", (req, res) => {
 		.catch(err => res.json(err));
 });
 
+router.delete("/diary/page/:_id", function(req, res) {
+	Diary.findOneAndRemove({
+		_id: req.params._id
+	}).then(function(dbDiary) {
+		res.json(dbDiary);
+	});
+});
+
 module.exports = router;

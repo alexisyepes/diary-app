@@ -13,13 +13,27 @@
 .bookCover {
 	height: 670px;
 	width: 600px;
-	background: rgba(168, 168, 56, 0.877);
+	background: rgb(73, 60, 31);
 	border: 10px dotted white;
 	/* justify-content: center; */
 	margin-top: 10px;
 	margin-bottom: 50px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.flipPageComponent {
+	margin-left: 40px;
+	border: 4px solid white;
+}
+
+.articleContent {
+	text-align: left;
+	margin-left: 20px;
+	margin-top: 10px;
+	color: white;
+	font-size: 20px;
+	text-shadow: 2px 2px #4e370b;
 }
 
 .pageContent {
@@ -36,6 +50,37 @@
 
 .openBookBtn {
 	margin-top: 80px;
+	margin-left: 5px;
+	padding: 10px 20px 10px 20px;
+	border-radius: 10px;
+	background: rgb(245, 188, 0);
+	color: white;
+	font-size: 18px;
+	text-shadow: 2px 2px #000000;
+	font-weight: bolder;
+}
+
+.deleteBtn {
+	margin-left: 5px;
+	padding: 10px 20px 10px 20px;
+	border-radius: 10px;
+	background: rgb(173, 21, 10);
+	color: white;
+	font-size: 14px;
+	text-shadow: 2px 2px #000000;
+	font-weight: bolder;
+}
+
+.openBookEmptyPageBtn {
+	margin-top: 80px;
+	margin-left: 5px;
+	padding: 10px 20px 10px 20px;
+	border-radius: 10px;
+	background: rgb(230, 92, 0);
+	color: white;
+	font-size: 18px;
+	text-shadow: 2px 2px #000000;
+	font-weight: bolder;
 }
 
 .profileTitle {
