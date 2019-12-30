@@ -27,6 +27,15 @@ class SignUp extends Component {
 			!this.state.password ||
 			!this.state.password2
 		) {
+			this.setState({
+				errorMsg: "Please enter all required fields!"
+			});
+			return;
+		}
+		if (!this.state.email.includes("@")) {
+			this.setState({
+				errorMsg: "Please enter a valid email address!"
+			});
 			return;
 		}
 		if (this.state.password !== this.state.password2) {
@@ -38,7 +47,7 @@ class SignUp extends Component {
 		}
 		if (this.state.password.length < 6) {
 			this.setState({
-				errorMsg: "Password must be at least 6 carachters long!"
+				errorMsg: "Password must be at least 6 characters long!"
 			});
 			return;
 		}
@@ -48,20 +57,24 @@ class SignUp extends Component {
 			firstName: this.state.firstName,
 			email: this.state.email,
 			password: this.state.password
-		})
-			// .then(alert("You can login now!"))
-			.then(
+		}).then(res => {
+			if (res.data.status === 400) {
+				this.setState({
+					errorMsg: res.data.message
+				});
+				return;
+			} else {
 				this.setState({
 					username: "",
 					firstName: "",
 					email: "",
 					password: "",
 					password2: ""
-				})
-			)
-			.then(res => console.log(res))
-			.catch(error => console.log(error));
-		window.location.href = "/login";
+				});
+				alert("You can Login now!");
+				window.location.href = "/login";
+			}
+		});
 	};
 
 	render() {
@@ -131,16 +144,16 @@ class SignUp extends Component {
 								</Button>
 							</div>
 						</FormGroup>
+						<h5
+							style={{
+								textAlign: "center",
+								color: "yellow",
+								paddingBottom: "10px"
+							}}
+						>
+							{this.state.errorMsg}
+						</h5>
 					</Form>
-					<h4
-						style={{
-							textAlign: "center",
-							color: "red",
-							paddingBottom: "10px"
-						}}
-					>
-						{this.state.errorMsg}
-					</h4>
 				</div>
 			</div>
 		);

@@ -10,10 +10,22 @@
 	margin-right: auto;
 }
 
+.bookTemp {
+	height: 670px;
+	width: 600px;
+	background: rgba(228, 228, 101, 0.719);
+	border: 10px dotted white;
+	justify-content: center;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .bookCover {
 	height: 670px;
 	width: 600px;
-	background: rgb(73, 60, 31);
+	background: rgba(228, 228, 101, 0.719);
 	border: 10px dotted white;
 	/* justify-content: center; */
 	margin-top: 10px;
@@ -30,10 +42,10 @@
 .articleContent {
 	text-align: left;
 	margin-left: 20px;
+	margin-right: 20px;
 	margin-top: 10px;
-	color: white;
+	color: rgb(49, 47, 47);
 	font-size: 20px;
-	text-shadow: 2px 2px #4e370b;
 }
 
 .pageContent {
@@ -79,6 +91,17 @@
 	background: rgb(230, 92, 0);
 	color: white;
 	font-size: 18px;
+	text-shadow: 2px 2px #000000;
+	font-weight: bolder;
+}
+
+.bookEmptyPageBtn {
+	margin-left: 5px;
+	padding: 10px 20px 10px 20px;
+	border-radius: 10px;
+	background: rgb(230, 92, 0);
+	color: white;
+	font-size: 14px;
 	text-shadow: 2px 2px #000000;
 	font-weight: bolder;
 }

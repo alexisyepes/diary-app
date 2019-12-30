@@ -81,7 +81,7 @@ class Sidebar extends Component {
 						</li>
 						<li>
 							<a className="sidebarLinks" href="/profile">
-								My Profile
+								My Diary
 							</a>
 						</li>
 						<li>

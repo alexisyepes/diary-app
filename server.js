@@ -33,7 +33,12 @@ app.use("/auth", usersRouter);
 app.use("/", diaryRouter);
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/diary", { useNewUrlParser: true });
+mongoose.connect(
+	`mongodb+srv://alexisyepes:${process.env.MONGO_ATLAS}@cluster0-b5sgz.mongodb.net/test?retryWrites=true&w=majority`,
+	{
+		useNewUrlParser: true
+	}
+);
 
 // Send every request to the React app
 // Define any API routes before this runs

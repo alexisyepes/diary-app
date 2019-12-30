@@ -79,7 +79,7 @@ class index extends Component {
 									About
 								</a>
 								<a className="nav-item nav-link" href="/profile">
-									My Profile
+									My Diary
 								</a>
 							</div>
 							<p className="usernameLoggedinHome">Logged in as {username}</p>

@@ -88,15 +88,15 @@ class SignIn extends Component {
 							Don't have an account yet? <br />
 							<a href="/signup">Click here to register</a>
 						</p>
-						<h4
+						<h5
 							style={{
 								textAlign: "center",
-								color: "red",
+								color: "yellow",
 								paddingBottom: "10px"
 							}}
 						>
 							{this.state.errorMessage}
-						</h4>
+						</h5>
 					</Form>
 				</div>
 			</div>
