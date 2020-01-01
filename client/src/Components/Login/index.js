@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
 import axios from "axios";
 import { Button, Form, FormGroup, Input } from "reactstrap";
 
@@ -53,10 +52,6 @@ class SignIn extends Component {
 		}
 	};
 	render() {
-		if (this.state.loggedIn === true) {
-			return <Redirect to={{ pathname: "/profile" }} />;
-		}
-
 		return (
 			<div className="container signinPage">
 				<div style={{ display: "flex", justifyContent: "center" }}>

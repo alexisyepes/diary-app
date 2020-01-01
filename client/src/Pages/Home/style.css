@@ -1,5 +1,38 @@
+.wrapper {
+	display: grid;
+	grid-auto-rows: minmax(100px, auto);
+	grid-template-columns: repeat(3, 1fr);
+	background: rgba(226, 223, 173, 0.719);
+	padding-bottom: 50px;
+	grid-gap: 5px;
+}
+
 .homeTitle {
+	grid-column-start: 1;
+	grid-column-end: 4;
 	text-shadow: 4px 4px #4e370b;
 	color: white;
 	margin-top: 80px;
+}
+.homeSubTitle {
+	text-align: center;
+	grid-column-start: 1;
+	grid-column-end: 5;
+}
+
+.imgRegister {
+	width: 270px;
+	justify-self: center;
+}
+
+.imgDiary1 {
+	grid-column: 2 /4;
+	width: 550px;
+}
+
+.imgDiary2 {
+	margin-top: 50px;
+	grid-row: 4;
+	width: 100%;
+	grid-column: 1 /4;
 }

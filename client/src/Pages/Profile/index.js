@@ -3,7 +3,7 @@ import axios from "axios";
 import API from "../../utils/API";
 import Fade from "react-reveal/Fade";
 import FlipPage from "react-flip-page";
-import Modal from "../../Components/Modal";
+// import Modal from "../../Components/Modal";
 import "./style.css";
 
 const index = props => {
@@ -91,12 +91,13 @@ const index = props => {
 		return (
 			<div
 				style={{
-					marginTop: "60px",
+					marginTop: "100px",
 					fontSize: "30px",
-					height: "100vh"
+					height: "100vh",
+					color: "white"
 				}}
 			>
-				...Problem fetching user data. Please login again
+				<h3>...Problem fetching user data. Please login again</h3>
 			</div>
 		);
 	}
@@ -127,8 +128,7 @@ const index = props => {
 						>
 							Empty Page
 						</button>
-						<button onClick={props.toggle}>Edit</button>
-						<Modal />
+						<hr style={{ background: "white" }} />
 						<article className="articleContent">{page.text}</article>
 					</div>
 				);
