@@ -105,7 +105,8 @@ const index = props => {
 		return (
 			<div
 				style={{
-					marginLeft: "10%",
+					marginTop: "100px",
+					color: "white",
 					fontSize: "30px",
 					height: "100vh"
 				}}
@@ -115,28 +116,30 @@ const index = props => {
 		);
 	}
 
-	const pagesList = pages.length
-		? pages.map(page => {
-				return (
-					<div className="articleContent" key={page._id}>
-						<button value={page._id} onClick={deletePage} className="deleteBtn">
-							Delete
-						</button>
-						<button
-							className="bookEmptyPageBtn"
-							onClick={toggleBookPagesHandler}
-						>
-							Empty Page
-						</button>
-						<hr style={{ background: "white" }} />
-						<article className="articleContent">{page.text}</article>
-					</div>
-				);
-		  })
-		: null;
+	const pagesList = pages.length ? (
+		pages.map(page => {
+			return (
+				<div className="articleContent" key={page._id}>
+					<button value={page._id} onClick={deletePage} className="deleteBtn">
+						Delete
+					</button>
+					<button className="bookEmptyPageBtn" onClick={toggleBookPagesHandler}>
+						Empty Page
+					</button>
+					<button className="openBookEditPageBtn">Edit Text</button>
+					<hr style={{ background: "white" }} />
+					<article className="articleContent">{page.text}</article>
+				</div>
+			);
+		})
+	) : (
+		<p className="messageWhenNoContentOnBook">
+			Your diary is empty. <br /> Click the Empty Page Button to start
+		</p>
+	);
 
 	return (
-		<div>
+		<div className="container profileMainContainer">
 			<button className="openBookBtn" onClick={getAllPagesBook}>
 				Open / Close Your Diary
 			</button>
@@ -148,7 +151,7 @@ const index = props => {
 				{toggleBookCover ? (
 					<Fade>
 						<div className="bookCover">
-							<h1 className="profileTitle">{name}'s Diary</h1>
+							<h1 className="profileTitle">It Belongs to {name}</h1>
 							<FlipPage
 								uncutPages="true"
 								showSwipeHint="true"
@@ -162,7 +165,14 @@ const index = props => {
 							</FlipPage>
 						</div>
 					</Fade>
-				) : null}
+				) : (
+					<h4
+						style={toggleBookPages ? { display: "none" } : { display: "block" }}
+						className="messageBeneathBooks"
+					>
+						↑ <br /> Use the buttons above
+					</h4>
+				)}
 			</div>
 
 			{toggleBookPages ? (

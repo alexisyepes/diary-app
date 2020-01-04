@@ -54,7 +54,7 @@ class SignUp extends Component {
 
 		API.addUser({
 			username: this.state.username,
-			firstName: this.state.firstName,
+			firstName: this.state.firstName.replace(/^./, str => str.toUpperCase()),
 			email: this.state.email,
 			password: this.state.password
 		}).then(res => {

@@ -1,37 +1,45 @@
+.profileMainContainer {
+	background: rgba(54, 34, 8, 0.74);
+	height: 900px;
+	border-radius: 10px;
+	border: dashed 2px white;
+}
+
 .book {
 	height: 670px;
 	width: 600px;
 	background: rgba(228, 228, 101, 0.719);
-	border: 10px dotted white;
+	border: 5px dashed white;
 	justify-content: center;
 	margin-top: 10px;
 	margin-bottom: 50px;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.bookTemp {
-	height: 670px;
-	width: 600px;
-	background: rgba(228, 228, 101, 0.719);
-	border: 10px dotted white;
-	justify-content: center;
-	margin-top: 10px;
-	margin-bottom: 50px;
-	margin-left: auto;
-	margin-right: auto;
+	border-radius: 10px;
 }
 
 .bookCover {
 	height: 670px;
 	width: 600px;
 	background: rgba(228, 228, 101, 0.719);
-	border: 10px dotted white;
-	/* justify-content: center; */
+	border: 5px dashed white;
 	margin-top: 10px;
 	margin-bottom: 50px;
 	margin-left: auto;
 	margin-right: auto;
+	border-radius: 10px;
+}
+
+.messageBeneathBooks {
+	color: white;
+	margin-top: 100px;
+	line-height: 200%;
+}
+
+.messageWhenNoContentOnBook {
+	color: rgb(94, 87, 67);
+	font-size: 24px;
+	margin-top: 30px;
 }
 
 .flipPageComponent {
@@ -43,7 +51,7 @@
 	text-align: left;
 	margin-left: 20px;
 	margin-right: 20px;
-	margin-top: 10px;
+	/* margin-top: 10px; */
 	color: rgb(49, 47, 47);
 	font-size: 20px;
 }
@@ -84,13 +92,25 @@
 }
 
 .openBookEmptyPageBtn {
-	margin-top: 80px;
+	/* margin-top: 80px; */
 	margin-left: 5px;
 	padding: 10px 20px 10px 20px;
 	border-radius: 10px;
 	background: rgb(230, 92, 0);
 	color: white;
 	font-size: 18px;
+	text-shadow: 2px 2px #000000;
+	font-weight: bolder;
+}
+
+.openBookEditPageBtn {
+	margin-top: 20px;
+	margin-left: 5px;
+	padding: 10px 20px 10px 20px;
+	border-radius: 10px;
+	background: rgb(32, 150, 21);
+	color: white;
+	font-size: 14px;
 	text-shadow: 2px 2px #000000;
 	font-weight: bolder;
 }
