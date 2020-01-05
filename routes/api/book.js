@@ -16,7 +16,7 @@ router.post("/diary", (req, res) => {
 		});
 });
 
-router.get("/diary/:_id", (req, res) => {
+router.get("/diary/page/:_id", (req, res) => {
 	console.log(res);
 	// console.log(res)
 	return Diary.findOne({
@@ -58,6 +58,16 @@ router.get("/diaryAll", (req, res) => {
 			res.json(dbDiary);
 		})
 		.catch(err => res.json(err));
+});
+
+router.put("/diary/page/:_id", (req, res) => {
+	Diary.findOneAndUpdate({ _id: req.params._id }, req.body).exec(function(
+		err,
+		diary
+	) {
+		if (err) return res.status(500).json({ err: err.message });
+		res.json({ diary, message: "Successfully updated" });
+	});
 });
 
 router.delete("/diary/page/:_id", function(req, res) {

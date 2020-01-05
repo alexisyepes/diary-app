@@ -3,7 +3,7 @@ import axios from "axios";
 import API from "../../utils/API";
 import Fade from "react-reveal/Fade";
 import FlipPage from "react-flip-page";
-// import Modal from "../../Components/Modal";
+import { Modal, ModalBody, ModalHeader } from "reactstrap";
 import "./style.css";
 
 const index = props => {
@@ -15,6 +15,9 @@ const index = props => {
 	const [pages, setPages] = useState([]);
 	const [toggleBookPages, setToggleBookPages] = useState(false);
 	const [toggleBookCover, setToggleBookCover] = useState(false);
+	const [textToEdit, setTextToEdit] = useState("");
+	const [modalToEdit, setModalToEdit] = useState(false);
+	const [pageId, setPageId] = useState("");
 
 	useEffect(() => {
 		const accessString = localStorage.getItem("JWT");
@@ -48,6 +51,29 @@ const index = props => {
 
 	const toggleBookCoverHandler = () => {
 		setToggleBookCover(!toggleBookCover);
+	};
+
+	const toggleModalToEdit = async ({ currentTarget }) => {
+		if (modalToEdit === false) {
+			setTextToEdit("");
+			setPageId("");
+		}
+		setModalToEdit(!modalToEdit);
+		setPageId(currentTarget.value);
+		const _id = currentTarget.value;
+		console.log(_id);
+		await API.getOnePageBook(_id)
+			.then(res => {
+				setTextToEdit(res.data.text);
+			})
+			.catch(err => console.log(err));
+	};
+
+	const textChangesSubmit = e => {
+		e.preventDefault();
+		API.updateOnePageBook(pageId)
+			.then(res => console.log(res))
+			.catch(err => console.log(err));
 	};
 
 	const getAllPagesBook = async e => {
@@ -126,7 +152,13 @@ const index = props => {
 					<button className="bookEmptyPageBtn" onClick={toggleBookPagesHandler}>
 						Empty Page
 					</button>
-					<button className="openBookEditPageBtn">Edit Text</button>
+					<button
+						className="openBookEditPageBtn"
+						value={page._id}
+						onClick={toggleModalToEdit}
+					>
+						Edit Text
+					</button>
 					<hr style={{ background: "white" }} />
 					<article className="articleContent">{page.text}</article>
 				</div>
@@ -146,7 +178,23 @@ const index = props => {
 			<button className="openBookEmptyPageBtn" onClick={toggleBookPagesHandler}>
 				Empty Page
 			</button>
-
+			<div>
+				<Modal isOpen={modalToEdit} toggle={toggleModalToEdit}>
+					<ModalHeader toggle={toggleModalToEdit}>
+						<p>TestModal Header</p>
+					</ModalHeader>
+					<ModalBody>
+						<form onSubmit={textChangesSubmit}>
+							<input
+								onChange={e => setTextToEdit(e.target.value)}
+								defaultValue={textToEdit}
+								type="text"
+							/>
+							<button>Save Changes</button>
+						</form>
+					</ModalBody>
+				</Modal>
+			</div>
 			<div>
 				{toggleBookCover ? (
 					<Fade>

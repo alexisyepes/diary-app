@@ -18,5 +18,11 @@ export default {
 	},
 	deletePage: _id => {
 		return axios.delete("/diary/page/" + _id);
+	},
+	getOnePageBook: _id => {
+		return axios.get("/diary/page/" + _id);
+	},
+	updateOnePageBook: _id => {
+		return axios.put("/diary/page/" + _id);
 	}
 };

@@ -103,6 +103,17 @@
 	font-weight: bolder;
 }
 
+.modal-backdrop {
+	background-color: transparent;
+	/* background-color: rgb(24, 44, 38); */
+}
+
+.modal {
+	background-color: rgba(255, 255, 255, 0);
+	width: 100%;
+	min-height: 1000px;
+}
+
 .openBookEditPageBtn {
 	margin-top: 20px;
 	margin-left: 5px;
