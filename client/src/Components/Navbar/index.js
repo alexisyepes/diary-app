@@ -56,9 +56,6 @@ class index extends Component {
 				<div className="appHeader">
 					<img className="logoHome" alt="gif logo" src={this.state.imageGif} />
 					<nav className="navbar navbar-expand-lg navbar-custom">
-						<a className="navbar-brand" href="/">
-							Menu
-						</a>
 						<button
 							className="navbar-toggler"
 							type="button"
@@ -75,9 +72,7 @@ class index extends Component {
 								<a className="nav-item nav-link active" href="/">
 									Home <span className="sr-only">(current)</span>
 								</a>
-								<a className="nav-item nav-link" href="/aboutus">
-									About
-								</a>
+
 								<a className="nav-item nav-link" href="/profile">
 									My Diary
 								</a>
@@ -96,9 +91,6 @@ class index extends Component {
 			<div className="appHeader">
 				<img className="logoHome" alt="gif logo" src={this.state.imageGif} />
 				<nav className="navbar navbar-expand-lg navbar-custom">
-					<a className="navbar-brand menuNoAuth" href="/">
-						Menu
-					</a>
 					<button
 						className="navbar-toggler"
 						type="button"
@@ -118,12 +110,7 @@ class index extends Component {
 							>
 								Home <span className="sr-only">(current)</span>
 							</a>
-							<a
-								className="nav-item nav-link linksNavbarNoAuth"
-								href="/aboutus"
-							>
-								About
-							</a>
+
 							<a className="nav-item nav-link linksNavbarNoAuth" href="/signup">
 								Register
 							</a>

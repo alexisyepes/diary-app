@@ -151,10 +151,7 @@ const index = props => {
 			return (
 				<div className="articleContent" key={page._id}>
 					<button value={page._id} onClick={deletePage} className="deleteBtn">
-						Delete
-					</button>
-					<button className="bookEmptyPageBtn" onClick={toggleBookPagesHandler}>
-						Empty Page
+						Delete Page
 					</button>
 					<button
 						className="openBookEditPageBtn"
@@ -162,6 +159,9 @@ const index = props => {
 						onClick={toggleModalToEdit}
 					>
 						Edit Text
+					</button>
+					<button className="bookEmptyPageBtn" onClick={toggleBookPagesHandler}>
+						Empty Page
 					</button>
 					<hr style={{ background: "white" }} />
 					<article className="articleContent">{page.text}</article>
@@ -185,7 +185,7 @@ const index = props => {
 			<div>
 				<Modal isOpen={modalToEdit} toggle={toggleModalToEdit}>
 					<ModalHeader toggle={toggleModalToEdit}>
-						<p>TestModal Header</p>
+						<p>Edit this page down below</p>
 					</ModalHeader>
 					<ModalBody>
 						<form onSubmit={textChangesSubmit}>

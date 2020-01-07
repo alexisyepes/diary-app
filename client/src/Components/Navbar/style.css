@@ -13,6 +13,10 @@
 	color: white;
 }
 
+.homeLinkNavbar {
+	margin-left: 100px;
+}
+
 .logoHome {
 	height: 160px;
 	width: 400px;
@@ -35,7 +39,7 @@
 }
 
 .nav-link {
-	margin-left: 40px;
+	margin-left: 240px;
 	color: white !important;
 	text-shadow: 2px 2px #4e370b;
 }
@@ -50,7 +54,7 @@
 }
 
 .linksNavbarNoAuth {
-	margin-left: 200px;
+	margin-left: 300px;
 }
 
 .navLinks {
