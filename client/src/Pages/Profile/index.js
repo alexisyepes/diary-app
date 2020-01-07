@@ -69,10 +69,14 @@ const index = props => {
 			.catch(err => console.log(err));
 	};
 
-	const textChangesSubmit = e => {
+	const textChangesSubmit = async e => {
 		e.preventDefault();
-		API.updateOnePageBook(pageId)
-			.then(res => console.log(res))
+		const _id = pageId;
+		let data = { text: textToEdit };
+		await API.updateOnePageBook(_id, data)
+			.then(() => {
+				window.location.href = "/profile";
+			})
 			.catch(err => console.log(err));
 	};
 
@@ -82,7 +86,7 @@ const index = props => {
 		setToggleBookPages(false);
 
 		const _id = user_id;
-		API.getAllPagesBook(_id)
+		await API.getAllPagesBook(_id)
 			.then(res => {
 				setPages(res.data.text);
 			})
@@ -199,7 +203,7 @@ const index = props => {
 				{toggleBookCover ? (
 					<Fade>
 						<div className="bookCover">
-							<h1 className="profileTitle">It Belongs to {name}</h1>
+							<h1 className="profileTitle">This Diary Belongs to {name}</h1>
 							<FlipPage
 								uncutPages="true"
 								showSwipeHint="true"

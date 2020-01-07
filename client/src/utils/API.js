@@ -22,7 +22,7 @@ export default {
 	getOnePageBook: _id => {
 		return axios.get("/diary/page/" + _id);
 	},
-	updateOnePageBook: _id => {
-		return axios.put("/diary/page/" + _id);
+	updateOnePageBook: (_id, data) => {
+		return axios.put("/diary/page/" + _id, data);
 	}
 };

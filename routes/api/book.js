@@ -61,13 +61,21 @@ router.get("/diaryAll", (req, res) => {
 });
 
 router.put("/diary/page/:_id", (req, res) => {
-	Diary.findOneAndUpdate({ _id: req.params._id }, req.body).exec(function(
-		err,
-		diary
-	) {
-		if (err) return res.status(500).json({ err: err.message });
-		res.json({ diary, message: "Successfully updated" });
-	});
+	Diary.findOneAndUpdate(
+		{
+			_id: req.params._id
+		},
+		{
+			...req.body
+		},
+		{ new: true }
+	)
+		.then(dbDiary => {
+			res.json(dbDiary);
+		})
+		.catch(err => {
+			reject(err);
+		});
 });
 
 router.delete("/diary/page/:_id", function(req, res) {
