@@ -117,19 +117,19 @@
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
 	/* Styles */
-	.navBarMainComp {
+	/* .navBarMainComp {
 		display: none;
 	}
 
 	.navBarMainCompAuth {
 		display: none;
-	}
+	} */
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 	/* Styles */
-	.homeLinkNavbarNoAuth {
+	/* .homeLinkNavbarNoAuth {
 		margin-left: 130px !important;
 		font-size: 20px;
 	}
@@ -153,24 +153,24 @@
 	.navBarMainComp {
 		margin-top: -250px;
 		margin-left: -80px;
-	}
+	} */
 }
 
 @media (max-width: 991px) {
 	/* Styles */
-	.navbar {
+	/* .navbar {
 		display: none;
-	}
+	} */
 }
 
 @media (max-width: 1025px) {
 	/* Styles */
-	.navbar-brand {
+	/* .navbar-brand {
 		margin-left: 50%;
 	}
 	.nav-link {
 		margin-left: 10px;
-	}
+	} */
 
 	.usernameLoggedinHome {
 		font-size: 18px;

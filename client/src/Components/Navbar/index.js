@@ -1,6 +1,13 @@
 import React, { Component } from "react";
+import {
+	Collapse,
+	Navbar,
+	NavbarToggler,
+	Nav,
+	NavItem,
+	NavLink
+} from "reactstrap";
 import axios from "axios";
-
 import "./style.css";
 
 class index extends Component {
@@ -10,7 +17,8 @@ class index extends Component {
 		this.state = {
 			username: "",
 			authorized: false,
-			imageGif: ""
+			imageGif: "",
+			isOpen: false
 		};
 	}
 
@@ -39,6 +47,11 @@ class index extends Component {
 			}
 		}
 	}
+
+	toggle = () =>
+		this.setState({
+			isOpen: !this.state.isOpen
+		});
 
 	//Logout User
 	handleLogOut(e) {
@@ -90,36 +103,30 @@ class index extends Component {
 		return (
 			<div className="appHeader">
 				<img className="logoHome" alt="gif logo" src={this.state.imageGif} />
-				<nav className="navbar navbar-expand-lg navbar-custom">
-					<button
-						className="navbar-toggler"
-						type="button"
-						data-toggle="collapse"
-						data-target="#navbarNavAltMarkup"
-						aria-controls="navbarNavAltMarkup"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span className="navbar-toggler-icon"></span>
-					</button>
-					<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-						<div className="navbar-nav">
-							<a
-								className="nav-item nav-link active linksNavbarNoAuth"
-								href="/"
-							>
-								Home <span className="sr-only">(current)</span>
-							</a>
-
-							<a className="nav-item nav-link linksNavbarNoAuth" href="/signup">
-								Register
-							</a>
-							<a className="nav-item nav-link linksNavbarNoAuth" href="/login">
-								Login
-							</a>
-						</div>
-					</div>
-				</nav>{" "}
+				<Navbar color="light" light expand="lg">
+					<NavbarToggler onClick={this.toggle} />
+					<Collapse isOpen={this.state.isOpen} navbar>
+						<Nav className="mr-auto" navbar>
+							<NavItem>
+								<NavLink href="/">Home</NavLink>
+							</NavItem>
+							<NavItem>
+								<NavLink href="/signup">Register</NavLink>
+							</NavItem>
+							<NavItem>
+								<NavLink href="/login">Login</NavLink>
+							</NavItem>
+							<NavItem>
+								<NavLink
+									href="https://github.com/alexisyepes/diary-app"
+									target="blank"
+								>
+									GitHub
+								</NavLink>
+							</NavItem>
+						</Nav>
+					</Collapse>
+				</Navbar>
 			</div>
 		);
 	}
