@@ -103,20 +103,20 @@ class index extends Component {
 		return (
 			<div className="appHeader">
 				<img className="logoHome" alt="gif logo" src={this.state.imageGif} />
-				<Navbar color="light" light expand="lg">
+				<Navbar color="warning" light expand="lg">
 					<NavbarToggler onClick={this.toggle} />
 					<Collapse isOpen={this.state.isOpen} navbar>
 						<Nav className="mr-auto" navbar>
-							<NavItem>
+							<NavItem className="navItemNavbar">
 								<NavLink href="/">Home</NavLink>
 							</NavItem>
-							<NavItem>
+							<NavItem className="navItemNavbar">
 								<NavLink href="/signup">Register</NavLink>
 							</NavItem>
-							<NavItem>
+							<NavItem className="navItemNavbar">
 								<NavLink href="/login">Login</NavLink>
 							</NavItem>
-							<NavItem>
+							<NavItem className="navItemNavbar">
 								<NavLink
 									href="https://github.com/alexisyepes/diary-app"
 									target="blank"

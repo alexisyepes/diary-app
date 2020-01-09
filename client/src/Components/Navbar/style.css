@@ -158,9 +158,10 @@
 
 @media (max-width: 991px) {
 	/* Styles */
-	/* .navbar {
-		display: none;
-	} */
+	.navItemNavbar {
+		width: 100%;
+		background: rgba(43, 41, 41, 0.925);
+	}
 }
 
 @media (max-width: 1025px) {
