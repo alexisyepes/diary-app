@@ -7,6 +7,7 @@ import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
+import AuthContextProvider from "./contexts/AuthContext";
 
 class App extends Component {
 	render() {
@@ -14,7 +15,9 @@ class App extends Component {
 			<Router>
 				<div className="App">
 					<Sidebar />
-					<Navbar />
+					<AuthContextProvider>
+						<Navbar />
+					</AuthContextProvider>
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/signup" component={Signup} />

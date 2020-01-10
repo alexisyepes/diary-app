@@ -85,11 +85,18 @@
 .usernameLoggedinHome {
 	font-size: 20px;
 	color: rgb(255, 255, 255);
-	margin-left: 15%;
 	text-shadow: 2px 2px #4e370b;
+	display: inline-block;
 
 	/* padding-top: 13px; */
-	margin-top: 15px;
+}
+
+.authNavItemNavbar {
+	margin-left: 200px;
+}
+
+.authNavItemNavbarBtn {
+	margin-left: 20px;
 }
 
 .logoutBtnNavbar {
@@ -97,10 +104,10 @@
 	border-radius: 10px;
 	background: rgb(77, 196, 243);
 	padding: 10px 20px 10px 20px;
-	margin-left: 1%;
 	font-size: 16px;
 	color: rgb(4, 9, 37);
 	font-weight: bolder;
+	display: inline-block;
 }
 
 /* Smartphones (portrait and landscape) ----------- */

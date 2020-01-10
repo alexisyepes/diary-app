@@ -11,7 +11,8 @@ class SignIn extends Component {
 		errorMessage: "",
 		loggedIn: false,
 		showError: false,
-		showNullError: false
+		showNullError: false,
+		authorized: false
 	};
 
 	handleChange = e => {
@@ -39,7 +40,8 @@ class SignIn extends Component {
 				this.setState({
 					loggedIn: true,
 					showError: false,
-					showNullError: false
+					showNullError: false,
+					authorized: true
 				});
 				window.location.href = "/profile";
 			} catch (error) {
