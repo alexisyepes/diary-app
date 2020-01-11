@@ -3,7 +3,7 @@ import axios from "axios";
 import API from "../../utils/API";
 import Fade from "react-reveal/Fade";
 import FlipPage from "react-flip-page";
-import { Modal, ModalBody, ModalHeader } from "reactstrap";
+import { Modal, ModalBody, ModalHeader, Button } from "reactstrap";
 import "./style.css";
 
 const index = props => {
@@ -18,6 +18,8 @@ const index = props => {
 	const [textToEdit, setTextToEdit] = useState("");
 	const [modalToEdit, setModalToEdit] = useState(false);
 	const [pageId, setPageId] = useState("");
+	const [flipPageWidth, setFlipPageWidth] = useState("");
+	// const [flipPageHeight, setFlipPageHeight] = useState("");
 
 	useEffect(() => {
 		const accessString = localStorage.getItem("JWT");
@@ -34,6 +36,13 @@ const index = props => {
 					setName(response.data.firstName);
 					setIsLoading(false);
 					setError(false);
+					if (window.innerWidth > 1450) {
+						setFlipPageWidth("500");
+						// setFlipPageHeight("500");
+					} else {
+						setFlipPageWidth("270");
+						// setFlipPageHeight("450");
+					}
 				};
 
 				fetchData();
@@ -158,7 +167,7 @@ const index = props => {
 						value={page._id}
 						onClick={toggleModalToEdit}
 					>
-						Edit Text
+						Edit
 					</button>
 					<button className="bookEmptyPageBtn" onClick={toggleBookPagesHandler}>
 						Empty Page
@@ -183,18 +192,23 @@ const index = props => {
 				Empty Page
 			</button>
 			<div>
-				<Modal isOpen={modalToEdit} toggle={toggleModalToEdit}>
+				<Modal
+					className="modalToEditText"
+					isOpen={modalToEdit}
+					toggle={toggleModalToEdit}
+				>
 					<ModalHeader toggle={toggleModalToEdit}>
-						<p>Edit this page down below</p>
+						<p className="editPageTitle">Edit this page down below</p>
 					</ModalHeader>
 					<ModalBody>
 						<form onSubmit={textChangesSubmit}>
 							<input
+								className="inputEditText"
 								onChange={e => setTextToEdit(e.target.value)}
 								defaultValue={textToEdit}
 								type="text"
 							/>
-							<button>Save Changes</button>
+							<Button block>Save Changes</Button>
 						</form>
 					</ModalBody>
 				</Modal>
@@ -209,8 +223,9 @@ const index = props => {
 								showSwipeHint="true"
 								pageBackground="rgb(230, 216, 95)"
 								className="flipPageComponent"
-								width="500"
+								width={flipPageWidth}
 								height="500"
+								// height={flipPageHeight}
 								orientation="horizontal"
 							>
 								{pagesList}

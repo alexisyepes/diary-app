@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import Sidebar from "./Components/Sidebar";
 import Navbar from "./Components/Navbar";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
@@ -14,7 +13,6 @@ class App extends Component {
 		return (
 			<Router>
 				<div className="App">
-					<Sidebar />
 					<AuthContextProvider>
 						<Navbar />
 					</AuthContextProvider>

@@ -36,3 +36,33 @@
 	width: 100%;
 	grid-column: 1 /4;
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Styles */
+	.homeTitle {
+		font-size: 45px;
+		margin-top: 10px;
+	}
+	.homeSubTitle {
+		font-size: 25px;
+		margin-top: 10px;
+	}
+
+	.wrapper {
+		display: flexbox;
+	}
+
+	.imgRegister {
+		width: 270px;
+	}
+
+	.imgDiary1 {
+		display: none;
+	}
+
+	.imgDiary2 {
+		margin-top: 50px;
+		width: 100%;
+	}
+}

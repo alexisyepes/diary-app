@@ -1,20 +1,8 @@
-.navBarMainCompAuth {
-	background: rgb(20, 20, 27);
-	margin-top: -240px;
-	margin-left: -60px;
-}
-
 .appHeader {
 	background-color: rgb(5, 0, 0);
-	/* min-width: 1500px; */
-	margin-top: -80px;
 	min-width: 100%;
 	height: 170px;
 	color: white;
-}
-
-.homeLinkNavbar {
-	margin-left: 100px;
 }
 
 .logoHome {
@@ -22,64 +10,11 @@
 	width: 400px;
 }
 
-.navbar-custom {
-	background: rgb(214, 156, 48);
-	color: white;
-}
-
-.navBarMainComp {
-	background: rgb(20, 20, 27);
-	margin-top: -248px;
-	margin-left: -80px;
-}
-
-.nav-item {
-	color: rgb(20, 20, 27) !important;
-	font-size: 20px;
-}
-
-.nav-link {
+.linksNavbar {
+	color: rgb(3, 0, 0) !important;
+	font-size: 18px;
 	margin-left: 240px;
-	color: white !important;
-	text-shadow: 2px 2px #4e370b;
-}
-
-.navbar-brand {
-	margin-left: 20%;
-	text-shadow: 2px 2px #4e370b;
-}
-
-.menuNoAuth {
-	margin-left: 10%;
-}
-
-.linksNavbarNoAuth {
-	margin-left: 300px;
-}
-
-.navLinks {
-	color: rgb(67, 217, 255);
-	font-size: 20px;
-	margin-left: 200px;
-	padding-top: 20px;
-}
-
-.homeLinkNavbarNoAuth {
-	margin-left: 300px;
-	padding-top: 20px;
-}
-
-.homLinkNavbar {
-	margin-left: 250px;
-	padding-top: 20px;
-}
-
-.aboutLinkNavbar,
-.profileLinkNavbar {
-	font-size: 20px;
-	color: rgb(67, 217, 255);
-	margin-left: 120px;
-	padding-top: 20px;
+	font-weight: bolder;
 }
 
 .usernameLoggedinHome {
@@ -87,12 +22,11 @@
 	color: rgb(255, 255, 255);
 	text-shadow: 2px 2px #4e370b;
 	display: inline-block;
-
-	/* padding-top: 13px; */
 }
 
 .authNavItemNavbar {
 	margin-left: 200px;
+	width: 100%;
 }
 
 .authNavItemNavbarBtn {
@@ -100,12 +34,11 @@
 }
 
 .logoutBtnNavbar {
-	color: rgb(255, 255, 255) !important;
+	color: rgb(4, 3, 37) !important;
 	border-radius: 10px;
 	background: rgb(77, 196, 243);
 	padding: 10px 20px 10px 20px;
 	font-size: 16px;
-	color: rgb(4, 9, 37);
 	font-weight: bolder;
 	display: inline-block;
 }
@@ -113,54 +46,34 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	/* Styles */
-	.navBarMainComp {
-		display: none;
+	.logoHome {
+		height: 100px;
+		width: 340px;
 	}
 
-	.navBarMainCompAuth {
-		display: none;
-	}
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
-	/* Styles */
-	/* .navBarMainComp {
-		display: none;
+	.authNavItemNavbar {
+		margin-left: 0px;
+		background: rgba(43, 41, 41, 0.925);
 	}
 
-	.navBarMainCompAuth {
-		display: none;
-	} */
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-	/* Styles */
-	/* .homeLinkNavbarNoAuth {
-		margin-left: 130px !important;
-		font-size: 20px;
+	.authNavItemNavbarBtn {
+		margin-left: 0px;
+		background: rgba(43, 41, 41, 0.925);
 	}
 
-	.navLinks {
-		font-size: 20px;
-		margin-left: 80px;
-	}
-
-	.homLinkNavbar {
-		margin-left: 130px;
-		font-size: 20px;
+	.linksNavbar {
+		color: rgb(252, 249, 249) !important;
+		font-size: 18px;
+		margin-left: 0px;
+		font-weight: normal;
 	}
 
 	.usernameLoggedinHome {
+		text-align: center;
 		font-size: 20px;
-		margin-left: 250px;
-		padding-top: 13px;
+		color: rgb(255, 255, 255);
+		display: block;
 	}
-
-	.navBarMainComp {
-		margin-top: -250px;
-		margin-left: -80px;
-	} */
 }
 
 @media (max-width: 991px) {
@@ -168,40 +81,14 @@
 	.navItemNavbar {
 		width: 100%;
 		background: rgba(43, 41, 41, 0.925);
+		color: white;
 	}
 }
 
 @media (max-width: 1025px) {
 	/* Styles */
-	/* .navbar-brand {
-		margin-left: 50%;
-	}
-	.nav-link {
-		margin-left: 10px;
-	} */
-
 	.usernameLoggedinHome {
 		font-size: 18px;
 		margin-left: 50px;
-	}
-}
-
-@media (max-width: 1152px) {
-	/* Styles */
-	.navbar-brand {
-		margin-left: 10%;
-	}
-	.nav-link {
-		margin-left: 20px;
-	}
-}
-
-@media (max-width: 1295px) {
-	/* Styles */
-	.menuNoAuth {
-		margin-left: 30%;
-	}
-	.linksNavbarNoAuth {
-		margin-left: 20px;
 	}
 }

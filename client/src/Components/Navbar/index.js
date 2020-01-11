@@ -68,16 +68,23 @@ class index extends Component {
 						) : (
 							<Nav className="mr-auto" navbar>
 								<NavItem className="navItemNavbar">
-									<NavLink href="/">Home</NavLink>
+									<NavLink className="linksNavbar" href="/">
+										Home
+									</NavLink>
 								</NavItem>
 								<NavItem className="navItemNavbar">
-									<NavLink href="/signup">Register</NavLink>
+									<NavLink className="linksNavbar" href="/signup">
+										Register
+									</NavLink>
 								</NavItem>
 								<NavItem className="navItemNavbar">
-									<NavLink href="/login">Login</NavLink>
+									<NavLink className="linksNavbar" href="/login">
+										Login
+									</NavLink>
 								</NavItem>
 								<NavItem className="navItemNavbar">
 									<NavLink
+										className="linksNavbar"
 										href="https://github.com/alexisyepes/diary-app"
 										target="blank"
 									>
