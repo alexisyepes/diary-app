@@ -55,8 +55,7 @@
 		margin-left: 0px;
 		background: rgba(43, 41, 41, 0.925);
 	}
-
-	.authNavItemNavbarBtn {
+	.linksNavbar {
 		margin-left: 0px;
 		background: rgba(43, 41, 41, 0.925);
 	}
@@ -76,12 +75,30 @@
 	}
 }
 
-@media (max-width: 991px) {
+@media only screen and (min-device-width: 767px) and (max-device-width: 1024px) {
 	/* Styles */
 	.navItemNavbar {
 		width: 100%;
 		background: rgba(43, 41, 41, 0.925);
 		color: white;
+	}
+	.authNavItemNavbar {
+		margin-left: 0px;
+		background: rgba(43, 41, 41, 0.925);
+	}
+	.authNavItemNavbarBtn {
+		margin-left: 0px;
+		background: rgba(43, 41, 41, 0.925);
+	}
+	.linksNavbar {
+		color: rgb(252, 249, 249) !important;
+		font-size: 18px;
+		margin-left: 0px;
+		font-weight: normal;
+	}
+	nav {
+		position: relative;
+		z-index: 1;
 	}
 }
 

@@ -36,7 +36,7 @@ const index = props => {
 					setName(response.data.firstName);
 					setIsLoading(false);
 					setError(false);
-					if (window.innerWidth > 1450) {
+					if (window.innerWidth > 767) {
 						setFlipPageWidth("500");
 						// setFlipPageHeight("500");
 					} else {

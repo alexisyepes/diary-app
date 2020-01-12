@@ -1,9 +1,9 @@
 {
-	"short_name": "Diary APp",
+	"short_name": "Diary App",
 	"name": "Diary App",
 	"icons": [
 		{
-			"src": "favicon.ico",
+			"src": "diary-app.png",
 
 			"type": "image/png"
 		}

@@ -3,7 +3,6 @@ const express = require("express");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
-// const routes = require("./routes");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const cors = require("cors");
@@ -11,7 +10,9 @@ const passport = require("passport");
 const usersRouter = require("./routes/api/users");
 const diaryRouter = require("./routes/api/book");
 
+//Heroku redirect
 app.use(sslRedirect());
+
 app.use(cors());
 // Passport Config
 require("./passport/passport")(passport);

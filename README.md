@@ -1,29 +1,34 @@
-# Create React Express App
+# My Diary App
 
-## About This Boilerplate
+by Alexis Y Sanabria
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+Link to Live site: https://alex-sanabria-diary-app.herokuapp.com/
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+### Full Stack Web Application
 
-## Starting the app locally
+![alt text](./client/public/Images/myDiaryApp.gif)
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+Simple diary to write your daily memories on an animated book that simulates flipping the pages.
 
-```
-npm install
-```
+# Technologies Used
 
-This should install node modules within the server and the client folder.
+### Front End
 
-After both installations complete, run the following command in your terminal:
+- React Js
+- Html
+- Css
+- Bootstrap
+- Reactstrap
+- Adobe After Effects
+- Adobe Photoshop
 
-```
-npm start
-```
+### Back End
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+- Node Js
+- Express
+- MongoDb (Atlas)
+- Passport Js
 
-## Deployment (Heroku)
+### Deployment
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+- Heroku
