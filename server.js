@@ -1,3 +1,4 @@
+const sslRedirect = require("heroku-ssl-redirect");
 const express = require("express");
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -10,6 +11,7 @@ const passport = require("passport");
 const usersRouter = require("./routes/api/users");
 const diaryRouter = require("./routes/api/book");
 
+app.use(sslRedirect());
 app.use(cors());
 // Passport Config
 require("./passport/passport")(passport);
