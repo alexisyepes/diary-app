@@ -55,6 +55,10 @@
 		margin-left: 0px;
 		background: rgba(43, 41, 41, 0.925);
 	}
+	.authNavItemNavbarBtn {
+		background: rgba(43, 41, 41, 0.925);
+		margin-left: 0px;
+	}
 	.linksNavbar {
 		margin-left: 0px;
 		background: rgba(43, 41, 41, 0.925);
@@ -75,7 +79,7 @@
 	}
 }
 
-@media only screen and (min-device-width: 767px) and (max-device-width: 1024px) {
+@media only screen and (min-device-width: 767px) and (max-device-width: 991px) {
 	/* Styles */
 	.navItemNavbar {
 		width: 100%;

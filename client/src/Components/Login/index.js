@@ -63,7 +63,7 @@ class SignIn extends Component {
 						<FormGroup>
 							<Input
 								placeholder="Email"
-								style={{ float: "right" }}
+								style={{ float: "right", color: "white" }}
 								type="email"
 								id="email"
 								value={this.state.email}
@@ -71,7 +71,7 @@ class SignIn extends Component {
 							/>
 							<Input
 								placeholder="Password"
-								style={{ float: "right", marginBottom: "15px" }}
+								style={{ float: "right", marginBottom: "15px", color: "white" }}
 								type="password"
 								id="password"
 								value={this.state.password}

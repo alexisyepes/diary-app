@@ -202,7 +202,7 @@ const index = props => {
 					</ModalHeader>
 					<ModalBody>
 						<form onSubmit={textChangesSubmit}>
-							<input
+							<textarea
 								className="inputEditText"
 								onChange={e => setTextToEdit(e.target.value)}
 								defaultValue={textToEdit}
@@ -224,7 +224,7 @@ const index = props => {
 								pageBackground="rgb(230, 216, 95)"
 								className="flipPageComponent"
 								width={flipPageWidth}
-								height="500"
+								height="530"
 								// height={flipPageHeight}
 								orientation="horizontal"
 							>
