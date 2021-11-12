@@ -11,6 +11,7 @@ import { CardFooter } from "reactstrap";
 import Modal from "./Components/Modal";
 
 const App = () => {
+	// eslint-disable-next-line
 	const [isModalOpen, setIsModalOpen] = useState(true);
 
 	return (

@@ -4,6 +4,7 @@
 	"private": true,
 	"proxy": "http://localhost:3001/",
 	"dependencies": {
+		"axios": "^0.24.0",
 		"create-react-context": "^0.3.0",
 		"material-design-icons": "^3.0.1",
 		"materialize-css": "^1.0.0-alpha.4",
@@ -11,7 +12,12 @@
 		"react": "^16.11.0",
 		"react-dom": "^16.6.3",
 		"react-router-dom": "^5.1.2",
-		"react-scripts": "^2.1.1"
+		"react-scripts": "^2.1.1",
+		"react-flip-page": "^1.6.4",
+		"reactstrap": "^8.2.0",
+		"react-reveal": "^1.2.2",
+		"react-bootstrap": "^1.0.0-beta.16",
+		"bootstrap": "^4.4.1"
 	},
 	"scripts": {
 		"start": "react-scripts start",

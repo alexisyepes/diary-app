@@ -37,7 +37,7 @@ app.use("/", diaryRouter);
 
 // Connect to the Mongo DB
 mongoose.connect(
-	`mongodb+srv://alex:${process.env.MONGO_ATLAS}@cluster0.wqffk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+	`mongodb+srv://alexisyepes:${process.env.MONGO_ATLAS}@cluster0-b5sgz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
 	{
 		useNewUrlParser: true,
 		useUnifiedTopology: true,

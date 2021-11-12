@@ -5,7 +5,7 @@ import {
 	NavbarToggler,
 	Nav,
 	NavItem,
-	NavLink
+	NavLink,
 } from "reactstrap";
 import { AuthContext } from "../../contexts/AuthContext";
 import "./style.css";
@@ -18,19 +18,19 @@ class index extends Component {
 
 		this.state = {
 			imageGif: "",
-			isOpen: false
+			isOpen: false,
 		};
 	}
 
 	async componentDidMount() {
 		this.setState({
-			imageGif: "./Images/diaryTitleAnimated.gif"
+			imageGif: "./Images/diaryTitleAnimated.gif",
 		});
 	}
 
 	toggle = () =>
 		this.setState({
-			isOpen: !this.state.isOpen
+			isOpen: !this.state.isOpen,
 		});
 
 	//Logout User
@@ -56,6 +56,9 @@ class index extends Component {
 										Logged in as: {username}
 									</p>
 								</NavItem>
+								<NavLink className="linksNavbar" href="/profile">
+									Profile
+								</NavLink>
 								<NavItem className="authNavItemNavbarBtn">
 									<button
 										className="logoutBtnNavbar"

@@ -6,7 +6,7 @@ import FlipPage from "react-flip-page";
 import { Modal, ModalBody, ModalHeader, Button } from "reactstrap";
 import "./style.css";
 
-const index = props => {
+const index = (props) => {
 	const [user_id, setUser_id] = useState("");
 	const [textToSave, setTextToSave] = useState("");
 	const [name, setName] = useState("");
@@ -30,7 +30,7 @@ const index = props => {
 			try {
 				const fetchData = async () => {
 					const response = await axios.get("/auth/profile", {
-						headers: { Authorization: `JWT ${accessString}` }
+						headers: { Authorization: `JWT ${accessString}` },
 					});
 					setUser_id(response.data._id);
 					setName(response.data.firstName);
@@ -72,13 +72,13 @@ const index = props => {
 		const _id = currentTarget.value;
 		console.log(_id);
 		await API.getOnePageBook(_id)
-			.then(res => {
+			.then((res) => {
 				setTextToEdit(res.data.text);
 			})
-			.catch(err => console.log(err));
+			.catch((err) => console.log(err));
 	};
 
-	const textChangesSubmit = async e => {
+	const textChangesSubmit = async (e) => {
 		e.preventDefault();
 		const _id = pageId;
 		let data = { text: textToEdit };
@@ -86,31 +86,31 @@ const index = props => {
 			.then(() => {
 				window.location.href = "/profile";
 			})
-			.catch(err => console.log(err));
+			.catch((err) => console.log(err));
 	};
 
-	const getAllPagesBook = async e => {
-		e.preventDefault();
+	const getAllPagesBook = async (e) => {
 		toggleBookCoverHandler();
 		setToggleBookPages(false);
 
 		const _id = user_id;
 		await API.getAllPagesBook(_id)
-			.then(res => {
+			.then((res) => {
+				console.log(res);
 				setPages(res.data.text);
 			})
-			.catch(err => console.log(err));
+			.catch((err) => console.log(err));
 	};
 
-	const saveText = async e => {
+	const saveText = async (e) => {
 		e.preventDefault();
 		const _id = user_id;
 		let newText = { text: textToSave };
 		await API.saveText(_id, newText)
-			.then(res => {
+			.then((res) => {
 				console.log(res.data);
 			})
-			.catch(err => console.log(err));
+			.catch((err) => console.log(err));
 		window.location.href = "/profile";
 	};
 
@@ -120,8 +120,8 @@ const index = props => {
 			window.confirm(`Are you sure you wish to delete this Page permanently?`)
 		) {
 			await API.deletePage(_id)
-				.then(res => console.log(res))
-				.catch(err => console.log(err));
+				.then((res) => console.log(res))
+				.catch((err) => console.log(err));
 			window.location.href = "/profile";
 		}
 	};
@@ -133,7 +133,7 @@ const index = props => {
 					marginTop: "100px",
 					fontSize: "30px",
 					height: "100vh",
-					color: "white"
+					color: "white",
 				}}
 			>
 				<h3>...Problem fetching user data. Please login again</h3>
@@ -147,7 +147,7 @@ const index = props => {
 					marginTop: "100px",
 					color: "white",
 					fontSize: "30px",
-					height: "100vh"
+					height: "100vh",
 				}}
 			>
 				Loading User Data...
@@ -156,7 +156,7 @@ const index = props => {
 	}
 
 	const pagesList = pages.length ? (
-		pages.map(page => {
+		pages.map((page) => {
 			return (
 				<div className="articleContent" key={page._id}>
 					<button value={page._id} onClick={deletePage} className="deleteBtn">
@@ -204,7 +204,7 @@ const index = props => {
 						<form onSubmit={textChangesSubmit}>
 							<textarea
 								className="inputEditText"
-								onChange={e => setTextToEdit(e.target.value)}
+								onChange={(e) => setTextToEdit(e.target.value)}
 								defaultValue={textToEdit}
 								type="text"
 							/>
@@ -250,7 +250,7 @@ const index = props => {
 							<textarea
 								name="textToSave"
 								defaultValue={textToSave}
-								onChange={e => setTextToSave(e.target.value)}
+								onChange={(e) => setTextToSave(e.target.value)}
 								className="bookInput"
 								rows="60"
 								cols="50"

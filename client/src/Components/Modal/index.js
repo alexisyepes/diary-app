@@ -8,7 +8,7 @@ const CustomModal = (props) => {
 			<ModalBody>
 				<h4 className="text-center">Site is under maintenance</h4>
 				<div className="img-wrapper">
-					<img className="plumber" src="./Images/plumber.png" />
+					<img alt="plumber" className="plumber" src="./Images/plumber.png" />
 				</div>
 			</ModalBody>
 		</Modal>
