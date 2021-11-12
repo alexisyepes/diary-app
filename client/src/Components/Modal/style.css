@@ -1,0 +1,15 @@
+.modal-component {
+	margin-top: 200px;
+}
+
+.modal-backdrop {
+	background-color: rgb(78, 78, 77);
+}
+
+.img-wrapper {
+	text-align: center;
+}
+
+.plumber {
+	width: 30%;
+}

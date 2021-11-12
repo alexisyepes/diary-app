@@ -37,15 +37,16 @@ app.use("/", diaryRouter);
 
 // Connect to the Mongo DB
 mongoose.connect(
-	`mongodb+srv://alexisyepes:${process.env.MONGO_ATLAS}@cluster0-b5sgz.mongodb.net/test?retryWrites=true&w=majority`,
+	`mongodb+srv://alex:${process.env.MONGO_ATLAS}@cluster0.wqffk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
 	{
-		useNewUrlParser: true
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
 	}
 );
 
 // Send every request to the React app
 // Define any API routes before this runs
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
 	console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });

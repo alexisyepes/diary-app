@@ -1,18 +1,18 @@
 import React from "react";
-import { Modal, ModalHeader, ModalBody } from "reactstrap";
+import { Modal, ModalBody } from "reactstrap";
+import "./style.css";
 
-class index extends React.Component {
-	render() {
-		console.log(this.props.isOpen);
-		return (
-			<Modal>
-				<ModalHeader>Edit this page</ModalHeader>
-				<ModalBody>
-					<div>Content will be here!</div>
-				</ModalBody>
-			</Modal>
-		);
-	}
-}
+const CustomModal = (props) => {
+	return (
+		<Modal className="modal-component" isOpen={props.isOpen}>
+			<ModalBody>
+				<h4 className="text-center">Site is under maintenance</h4>
+				<div className="img-wrapper">
+					<img className="plumber" src="./Images/plumber.png" />
+				</div>
+			</ModalBody>
+		</Modal>
+	);
+};
 
-export default index;
+export default CustomModal;
